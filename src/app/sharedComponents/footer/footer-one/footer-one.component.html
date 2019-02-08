@@ -1,0 +1,35 @@
+
+<div class="footer footerOne">
+
+  <div class="topFootWrap">
+    <div class="brand">
+      <a>
+        <img src="assets/img/{{_fs.brand.fullLogo}}" [alt]="_fs.brand.name">
+      </a>
+    </div>
+    <div class="menuWrap">
+      <ul>
+        <li *ngFor="let item of _fs.menu.items">
+          <a>{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bttmFootWrap">
+
+      <div class="socialWrap">
+        <div class="item" *ngFor="let soc of _fs.brand.social">
+          <a>
+            <i class="{{soc.icon}}"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="legal">
+        <p [innerHtml]="_fs.legal"></p>
+      </div>
+
+  </div>
+
+</div>

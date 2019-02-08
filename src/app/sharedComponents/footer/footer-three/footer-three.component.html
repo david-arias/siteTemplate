@@ -1,0 +1,18 @@
+
+<div class="footer footerThree">
+
+  <div class="footWrap">
+    <div class="menuWrap">
+      <ul>
+        <li *ngFor="let item of _fs.menu.items">
+          <a>{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="legal">
+      <p [innerHtml]="_fs.legal"></p>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,356 @@
+
+$mainNavBg: #{$grey-light};
+$mainNavColor: #{$main};
+
+.navBar {
+     @include mainFont_rg;
+}
+
+// navBar ONE
+.navBarOne {
+     background: $mainNavBg;
+     color: $mainNavColor;
+
+     .navWrap {
+          width: calc(100vw - #{$mainGutter * 4});
+          height: $menu-height;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 #{$mainGutter * 2};
+          
+          @include mq_tablet() {
+               width: calc(100vw - #{$mainGutter * 2});
+               padding: 0 #{$mainGutter};
+          }
+
+          .brand {
+               a {
+                    img {
+                         height: $menu-height - 15px;
+                         
+                         @include mq_tablet() {
+                              height: $menu-height - 30px;
+                         }
+                    }
+               }
+          }
+          .menuWrap {
+               display: flex;
+               align-items: center;
+               
+               .trgrMenu {
+                    width: 40px;
+                    height: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 25px;
+                    display: none;
+                    
+                    @include mq_tablet {
+                         display: flex;
+                    }
+               }
+
+               ul {
+                    display: flex;
+                    
+                    @include mq_tablet {
+                         display: none;
+                    }
+
+                    li {
+                         margin: 0 0 0 #{$mainGutter};
+                    }
+               }
+          }
+     }
+}
+
+// navBar TWO
+.navBarTwo {
+     background: $mainNavBg;
+     color: $mainNavColor;
+
+     .navWrap {
+          width: calc(100vw - #{$mainGutter * 4});
+          height: $menu-height;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 #{$mainGutter * 2};
+
+          @include mq_tablet() {
+               width: calc(100vw - #{$mainGutter * 2});
+               padding: 0 #{$mainGutter};
+          }
+          
+          .brand {
+               display: flex;
+               align-items: center;
+
+               a {
+                    img {
+                         height: $menu-height - 15px;
+
+                         @include mq_tablet() {
+                              height: $menu-height - 30px;
+                         }
+                    }
+               }
+
+               .trgrMenu {
+                    width: 40px;
+                    height: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 25px;
+                    display: none;
+                    
+                    @include mq_tablet {
+                         display: flex;
+                    }
+               }
+
+          }
+          .menuWrap {
+
+               @include mq_tablet {
+                    display: none;
+               }
+
+               ul {
+                    display: flex;
+                    li {
+                         margin: 0 0 0 #{$mainGutter};
+                    }
+               }
+          }
+     }
+}
+
+// navBar Three
+.navBarThree {
+     
+     .topNavWrap {
+          background: $mainNavBg;
+          color: $mainNavColor;
+
+          width: calc(100vw - #{$mainGutter * 4});
+          height: $menu-height;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 #{$mainGutter * 2};
+
+          @include mq_tablet() {
+               width: calc(100vw - #{$mainGutter * 2});
+               padding: 0 #{$mainGutter};
+          }
+
+          .brand {
+               display: flex;
+               align-items: center;
+
+               .trgrMenu {
+                    width: 40px;
+                    height: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 25px;
+                    display: none;
+                    
+                    @include mq_tablet {
+                         display: flex;
+                    }
+               }
+
+               a {
+                    img {
+                         height: $menu-height - 15px;
+
+                         @include mq_tablet() {
+                              height: $menu-height - 30px;
+                         }
+                    }
+               }
+          }
+
+          .infoWrap {
+               display: flex;
+               @include mainFont_rg;
+
+               .item {
+                    margin: 0 0 0 #{$mainGutter * 2};
+                    a {
+                         i {
+                              margin: 0 5px 0 0;
+                         }
+                    }
+                    @include mq_tabletSm() {
+
+                         margin: 0 0 0 #{$mainGutter};
+
+                         a {
+
+                              span {
+                                   display: none;
+                              }
+                              i {
+                                   font-size: 22px;
+                              }
+
+                         }
+                    } 
+               }
+          }
+     }
+     .bttmNavWrap {
+          background: white;
+          color: $mainNavColor;
+
+          width: calc(100vw - #{$mainGutter * 4});
+          height: $menu-height / 1.8;
+          display: flex;
+          align-items: center;
+          padding: 0 #{$mainGutter * 2};
+          border-bottom: thin solid $grey;
+
+          @include mq_tablet {
+               display: none;
+          }
+
+          .menuWrap {
+               width: calc(100vw - #{$mainGutter * 4});
+               ul {
+                    display: flex;
+                    justify-content: space-around;
+                    li {
+                         margin: 0 0 0 #{$mainGutter};
+                    }
+               }
+          }
+     }
+}
+
+// navBar Three
+.navBarFour {
+     .topNavWrap {
+          background: white;
+          color: $mainNavColor;
+
+          width: calc(100vw - #{$mainGutter * 4});
+          height: $menu-height / 1.8;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 #{$mainGutter * 2};
+          border-bottom: thin solid $grey;
+
+          @include mq_tablet() {
+               width: calc(100vw - #{$mainGutter * 2});
+               padding: 0 #{$mainGutter};
+          }
+
+          .infoWrap {
+               display: flex;
+               @include mainFont_rg;
+
+               .item {
+                    margin: 0 #{$mainGutter * 2} 0 0;
+                    a {
+                         i {
+                              margin: 0 5px 0 0;
+                         }
+                    }
+
+                    @include mq_tabletSm() {
+
+                         margin: 0 0 0 #{$mainGutter};
+
+                         a {
+
+                              span {
+                                   display: none;
+                              }
+                              i {
+                                   font-size: 18px;
+                              }
+
+                         }
+                    } 
+               }
+          }
+          .socialWrap {
+               display: flex;
+               @include mainFont_rg;
+
+               .item {
+                    margin: 0 0 0 #{$mainGutter};
+                    a {
+                         i {
+                              margin: 0 5px 0 0;
+                         }
+                    }
+               }
+          }
+     }
+
+     .bttmNavWrap {
+          background: $mainNavBg;
+          color: $mainNavColor;
+     
+          width: calc(100vw - #{$mainGutter * 4});
+          height: $menu-height;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 #{$mainGutter * 2};
+
+          @include mq_tablet() {
+               width: calc(100vw - #{$mainGutter * 2});
+               padding: 0 #{$mainGutter};
+          }
+
+          .brand {
+               a {
+                    img {
+                         height: $menu-height - 15px;
+
+                         @include mq_tablet() {
+                              height: $menu-height - 30px;
+                         }
+                    }
+               }
+          }
+          .menuWrap {
+               display: flex;
+               align-items: center;
+               
+               .trgrMenu {
+                    width: 40px;
+                    height: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 25px;
+                    display: none;
+                    
+                    @include mq_tablet {
+                         display: flex;
+                    }
+               }
+
+               ul {
+                    display: flex;
+
+                    @include mq_tablet {
+                         display: none;
+                    }
+
+                    li {
+                         margin: 0 0 0 #{$mainGutter};
+                    }
+               }
+          }
+     }
+}

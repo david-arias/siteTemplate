@@ -1,0 +1,52 @@
+
+<div class="navBar navBarFour">
+
+    <div class="topNavWrap">
+  
+      <div class="infoWrap">
+        <div class="item itemMail">
+          <a>
+            <i class="far fa-envelope"></i>
+            <span>{{_nbs.brand.infoMail}}</span>
+          </a>
+        </div>
+        <div class="item itemPhone">
+          <a>
+            <i class="fas fa-phone"></i>
+            <span>{{_nbs.brand.phone}}</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="socialWrap">
+        <div class="item" *ngFor="let soc of _nbs.brand.social">
+          <a>
+            <i class="{{soc.icon}}"></i>
+          </a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="bttmNavWrap">
+  
+        <div class="brand">
+          <a>
+            <img src="assets/img/{{_nbs.brand.fullLogo}}" [alt]="_nbs.brand.name">
+          </a>
+        </div>
+        <div class="menuWrap">
+          <ul>
+            <li *ngFor="let item of _nbs.menu.items">
+              <a>{{item.name}}</a>
+            </li>
+          </ul>
+
+          <a class="trgrMenu">
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
+  
+    </div>
+  
+  </div>

@@ -1,0 +1,35 @@
+
+<div class="footer footerFour">
+
+  <div class="topFootWrap">
+    <div class="menuWrap">
+      <ul>
+        <li *ngFor="let item of _fs.menu.items">
+          <a>{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="newsSubs">
+      <div class="inputWrap">
+        <input type="text" placeholder="your email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bttmFootWrap">
+      <div class="legal">
+        <p [innerHtml]="_fs.legal"></p>
+      </div>
+
+      <div class="socialWrap">
+        <div class="item" *ngFor="let soc of _fs.brand.social">
+          <a>
+            <i class="{{soc.icon}}"></i>
+          </a>
+        </div>
+      </div>
+  </div>
+
+</div>

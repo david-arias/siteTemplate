@@ -1,0 +1,29 @@
+
+<div class="navBar navBarTwo">
+
+    <div class="navWrap">
+  
+      <div class="brand">
+        <a class="trgrMenu">
+          <i class="fas fa-bars"></i>
+        </a>
+        <a>
+          <img src="assets/img/{{_nbs.brand.fullLogo}}" [alt]="_nbs.brand.name">
+        </a>
+      </div>
+      <div class="menuWrap">
+        <ul>
+          <li *ngFor="let item of _nbs.menu.items">
+            <a>{{item.name}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ctaWrap">
+        <button class="cusBtn">
+          {{_nbs.menu.callToAction.name}}
+        </button>
+      </div>
+  
+    </div>
+  
+  </div>

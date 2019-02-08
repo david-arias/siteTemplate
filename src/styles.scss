@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+// RESET
+@import './assets/scss/reset';
+
+// VARS
+@import './assets/scss/vars';
+
+// VARS
+@import './assets/scss/fonts';
+
+
+// custom reset
+body {
+     // @include mainFont_rg;
+
+     background: salmon;
+     hr {
+          border-color: red;
+     }
+}
+* a {
+     text-decoration: none;
+     cursor: pointer;
+}
+
+// custom buttons
+.cusBtn {
+     appearance: none;
+     border-radius: 5px;
+     padding: 7px 30px;
+     font-size: 16px;
+     letter-spacing: 1px;
+
+     @include mainFont_rg;
+
+     background: transparent;
+     border: thin solid #{$main};
+     color: #{$main};
+}
+
+
+// SHARED COMPONENTS
+@import './assets/scss/sharedComponents/navBars';
+@import './assets/scss/sharedComponents/footers';
