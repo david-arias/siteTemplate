@@ -12,6 +12,7 @@ import { FooterOneComponent } from './footer/footer-one/footer-one.component';
 import { FooterTwoComponent } from './footer/footer-two/footer-two.component';
 import { FooterThreeComponent } from './footer/footer-three/footer-three.component';
 import { FooterFourComponent } from './footer/footer-four/footer-four.component';
+import { ValPropOneComponent } from './valProp/val-prop-one/val-prop-one.component';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { FooterFourComponent } from './footer/footer-four/footer-four.component'
           FooterOneComponent,
           FooterTwoComponent,
           FooterThreeComponent,
-          FooterFourComponent
+          FooterFourComponent,
+
+          ValPropOneComponent
      ],
      exports: [
           NavbarOneComponent,
@@ -38,7 +41,9 @@ import { FooterFourComponent } from './footer/footer-four/footer-four.component'
           FooterOneComponent,
           FooterTwoComponent,
           FooterThreeComponent,
-          FooterFourComponent
+          FooterFourComponent,
+
+          ValPropOneComponent
      ],
      providers: [],
 })

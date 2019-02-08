@@ -12,6 +12,7 @@
 
 // custom reset
 body {
+     line-height: 1.3;
      // @include mainFont_rg;
 
      background: salmon;
@@ -43,3 +44,5 @@ body {
 // SHARED COMPONENTS
 @import './assets/scss/sharedComponents/navBars';
 @import './assets/scss/sharedComponents/footers';
+
+@import './assets/scss/sharedComponents/valProps';

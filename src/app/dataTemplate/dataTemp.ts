@@ -59,3 +59,44 @@ export const MENU = {
           link: "#"
      }
 } 
+
+
+
+// VALUE PROPOSAL
+export const VALPROP = {
+     backGround: "https://images.unsplash.com/photo-1549571558-7ca00bbd1b40?auto=format&fit=crop&w=1920&h=1080&q=80",
+     mainTitle: "Welcome to your new wireframe kit",
+     subTitle: "If you’re looking for the latest in wireless headphones, look no further. These are perfect for TV, stereo, home, and cell phone.",
+     buttons: [
+          {
+               label: "start now",
+               link: "#",
+               icon: null,
+          },
+          {
+               label: "watch more",
+               link: "#",
+               icon: "far fa-play-circle",
+          }
+     ],
+     facts: [
+          {
+               title: "type something",
+               body: "Lorem ipsum dolor sit amet consectetur.",
+               link: "#",
+               icon: "fas fa-bug"
+          },
+          {
+               title: "type something",
+               body: "Lorem ipsum dolor sit amet consectetur.",
+               link: "#",
+               icon: "fas fa-bug"
+          },
+          {
+               title: "type something",
+               body: "Lorem ipsum dolor sit amet consectetur.",
+               link: "#",
+               icon: "fas fa-bug"
+          }
+     ]
+}

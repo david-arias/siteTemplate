@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { NavbarService } from './navbar/navbar.service';
 import { FooterService } from './footer/footer.service';
 
+import { ValPropService } from './valProp/val-prop.service';
+
 
 @NgModule({
      imports: [
@@ -17,7 +19,9 @@ import { FooterService } from './footer/footer.service';
      ],
      providers: [
           NavbarService,
-          FooterService
+          FooterService,
+
+          ValPropService
      ],
 })
 export class ServicesModule { }
