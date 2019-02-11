@@ -300,6 +300,9 @@ $mainFootColor: #{$main};
                          padding: 0 20px;
                          border-radius: 0px 8px 8px 0px;
                          font-size: 14px;
+                         text-transform: uppercase;
+                         letter-spacing: 1px;
+                         @include mainFont_lg;
                     }
                }
           }

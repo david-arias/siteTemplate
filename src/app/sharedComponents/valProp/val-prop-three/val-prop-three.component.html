@@ -1,0 +1,35 @@
+
+<div class="valProp valPropThree">
+  <div class="valPropBg">
+    <img [src]="_vps.valPropInfo.backGround" alt="">
+  </div>
+
+  <div class="valPropInfo">
+    <div class="mainTtl">{{_vps.valPropInfo.mainTitle}}</div>
+    <div class="subTtl">{{_vps.valPropInfo.subTitle}}</div>
+
+    <div class="itemsList">
+      <div class="item" *ngFor="let fact of _vps.valPropInfo.facts">
+        <a>
+          <i class="{{fact.icon}}"></i>
+          <span>{{fact.title}}</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="leadWrap" *ngIf="_vps.valPropInfo.form.active">
+    <div class="ttl">
+      {{_vps.valPropInfo.form.title}}
+    </div>
+    <form>
+      
+      <app-shared-form [formItems]="_vps.valPropInfo.form.fields"></app-shared-form>
+
+      <div class="formItem formItem-submit">
+        <input type="submit" value="Contact us!">
+      </div>
+    </form>
+  </div>
+</div>

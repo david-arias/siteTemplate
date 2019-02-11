@@ -1,0 +1,19 @@
+
+<div class="valProp valPropTwo">
+  <div class="valPropBg">
+    <img [src]="_vps.valPropInfo.backGround" alt="">
+  </div>
+
+  <div class="valPropInfo">
+    <div class="mainTtl">{{_vps.valPropInfo.mainTitle}}</div>
+    <div class="subTtl">{{_vps.valPropInfo.subTitle}}</div>
+
+    <div class="buttonWrap">
+      <button *ngFor="let btn of _vps.valPropInfo.buttons" class="cusBtn {{btn.class}}">
+        <i class="{{btn.icon}}"></i>
+        {{btn.label}}
+      </button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,70 @@
+
+
+<div class="formItem" *ngFor="let formItm of formItems">
+
+  <!-- text fields -->
+  <div class="textItem" *ngIf="formItm.type == 'text'">
+    <div class="icon">
+      <i class="{{formItm.icon}}"></i>
+    </div>
+    <input type="text" name="{{formItm.name}}" placeholder="{{formItm.placeHolder}}" [required]="formItm.required">
+  </div>
+
+  <!-- number fields -->
+  <div class="numberItem" *ngIf="formItm.type == 'number'">
+    <div class="icon">
+      <i class="{{formItm.icon}}"></i>
+    </div>
+    <input type="number" name="{{formItm.name}}" placeholder="{{formItm.placeHolder}}" [required]="formItm.required">
+  </div>
+
+  <!-- email fields -->
+  <div class="emailItem" *ngIf="formItm.type == 'email'">
+    <div class="icon">
+      <i class="{{formItm.icon}}"></i>
+    </div>
+    <input type="email" name="{{formItm.name}}" placeholder="{{formItm.placeHolder}}" [required]="formItm.required">
+  </div>
+
+  <!-- select fields -->
+  <div class="selectItem" *ngIf="formItm.type == 'select'">
+    <select name="{{formItm.name}}" id="{{formItm.name}}" [required]="formItm.required">
+      <option value="">{{formItm.placeHolder}}</option>
+      <option *ngFor="let opt of formItm.options" value="{{opt.value}}">
+        {{opt.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- checkBox fields -->
+  <div class="checkboxItem" *ngIf="formItm.type == 'checkbox'">
+    <div class="cusCheck">
+      <div class="cusCheckItm" *ngFor="let check of formItm.options">
+        <input type="checkbox" name="{{formItm.name}}" id="{{check.name}}">
+        <label for="{{check.name}}" class="cusChecked">
+            <svg xml:space="preserve" focusable="false" version="1.1" viewBox="0 0 24 24"><path d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path></svg>
+        </label>
+        <label for="{{check.name}}" class="cusCheckTxt">{{check.label}}</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Radio fields -->
+  <div class="radioItem" *ngIf="formItm.type == 'radio'">
+    <div class="cusRadio">
+      <div class="cusRadioItm" *ngFor="let radio of formItm.options">
+        <input type="radio" name="{{formItm.name}}" id="{{radio.name}}" [required]="formItm.required">
+        <label for="{{radio.name}}" class="cusRaded">
+            <span></span>
+        </label>
+        <label for="{{radio.name}}" class="cusradioTxt">{{radio.label}}</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Textarea fields -->
+  <div class="textAreaItem" *ngIf="formItm.type == 'textArea'">
+    <textarea name="{{formItm.name}}" id="{{formItm.name}}" [required]="formItm.required"></textarea>
+  </div>
+
+</div>

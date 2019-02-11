@@ -1,13 +1,21 @@
 
 
-.valProp {
+.valPropOne {
      position: relative;
      width: 100vw;
-     height: 100vh;
+     height: calc( 100vh - 100px);
 
      display: flex;
      align-items: center;
      justify-content: center;
+
+     @include mq_tablet() {
+          height: 800px;
+     }
+     @include mq_tabletSm() {
+          height: auto;
+          padding: 100px 0;
+     }
 
      .valPropBg{
           top: 0;
@@ -15,6 +23,7 @@
           position: absolute;
           width: 100%;
           height: 100%;
+          overflow: hidden;
 
           z-index: 0;
 
@@ -23,11 +32,17 @@
                width: 100vw;
                height: 100vh;
                object-fit: cover;
+
+
+               @include mq_tablet() {
+                    height: 100%;
+               }
           }
      }
 
      .valPropInfo {
           z-index: 5;
+          color: $main;
           
 
           .mainTtl {
@@ -37,6 +52,13 @@
                width: 600px;
                text-align: center;
                margin: 0 auto 0 auto;
+
+               @include mq_tablet() {
+                    font-size: 45px;
+               }
+               @include mq_tabletSm() {
+                    width: 80vw;
+               }
           }
           .subTtl {
                margin: 20px auto 0 auto;
@@ -45,12 +67,476 @@
                font-size: 20px;
                width: 500px;
                text-align: center;
+
+               @include mq_tablet() {
+                    font-size: 18px;
+               }
+               @include mq_tabletSm() {
+                    width: 65vw;
+               }
+               
+               @include mq_tabletSm() {
+                    width: 80vw;
+               }
           }
           .buttonWrap {
                margin: 20px auto;
                text-align: center;
           }
           .factsWrap {
+               display: flex;
+               justify-content:  center;
+               margin: 60px 0 0 0;
+
+               @include mq_phone() {
+                    flex-wrap: wrap;
+               }
+
+               .factItem {
+                    text-align: center;
+                    width: 200px;
+                    margin: 0 30px;
+                    
+                    @include mq_tablet() {
+                         width: 150px;
+                         margin: 0 20px;
+                    }
+                    @include mq_phone() {
+                         width: 100%;
+                         margin: 30px 20px;
+                    }
+
+                    .icon {
+                         font-size: 40px;
+
+                         @include mq_tablet() {
+                              font-size: 30px;
+                         }
+                    }
+                    .factTtl {
+                         @include mainFont_bd;
+                         font-size: 20px;
+                         margin: 10px 0;
+
+                         @include mq_tablet() {
+                              font-size: 18px;
+                         }
+                    }
+                    .factBody {
+                         @include mainFont_rg;
+                         font-size: 16px;
+                    }
+               }
           }
+     }
+}
+
+.valPropTwo {
+     position: relative;
+     width: 100vw;
+     height: calc( 100vh - 100px);
+
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+
+     @include mq_tablet() {
+          height: 800px;
+     }
+     @include mq_tabletSm() {
+          height: auto;
+          padding: 100px 0;
+     }
+
+     .valPropBg{
+          top: 0;
+          left: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          z-index: 0;
+
+          img {
+               display: block;
+               width: 100vw;
+               height: 100vh;
+               object-fit: cover;
+
+               @include mq_tablet() {
+                    height: 100%;
+               }
+          }
+     }
+
+     .valPropInfo {
+          z-index: 5;
+          color: $main;
+          margin: 0 0 0 50px ;
+          
+          .mainTtl {
+               @include mainFont_bd();
+               
+               font-size: 55px;
+               width: 600px;
+               text-align: left;
+               margin: 0 ;
+
+               @include mq_tablet() {
+                    font-size: 45px;
+               }
+               @include mq_tabletSm() {
+                    width: 70vw;
+               }
+               @include mq_phone() {
+                    width: 80vw;
+                    text-align: center;
+               }
+          }
+          .subTtl {
+               margin: 20px 0;
+               @include mainFont_rg();
+               
+               font-size: 20px;
+               width: 600px;
+               text-align: left;
+
+               @include mq_tablet() {
+                    font-size: 18px;
+               }
+               @include mq_tabletSm() {
+                    width: 65vw;
+               }
+               
+               @include mq_phone() {
+                    width: 80vw;
+                    text-align: center;
+               }
+          }
+          .buttonWrap {
+               margin: 60px auto;
+               text-align: left;
+               display: flex;
+
+               @include mq_phone() {
+                    display: block;
+                    text-align: center;
+               }
+
+               .btnVid {
+                    border: none;
+                    margin: 0 0 0 20px;
+                    display: flex;
+                    align-items: center;
+                    
+                    @include mq_phone() {
+                         margin: 20px auto 0 auto;
+                    }
+                    
+
+                    i {
+                         font-size: 25px;
+                         margin: 0 10px 0 0;
+                    }
+               }
+          }
+     }
+}
+
+.valPropThree {
+     position: relative;
+     width: 100vw;
+     height: calc( 100vh - 100px);
+
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+
+     @include mq_tablet() {
+          height: 800px;
+     }
+     @include mq_tabletSm() {
+          height: auto;
+          padding: 100px 0;
+     }
+
+     @include mq_tabletSm() {
+          display: block;
+     }
+
+     .valPropBg{
+          top: 0;
+          left: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          z-index: 0;
+
+          img {
+               display: block;
+               width: 100vw;
+               height: 100vh;
+               object-fit: cover;
+
+               @include mq_tablet() {
+                    height: 100%;
+               }
+          }
+     }
+
+     .valPropInfo {
+          z-index: 5;
+          color: $main;
+          margin: 0 0 0 50px ;
+
+          @include mq_tabletSm() {
+               position: relative;
+               margin: 0 0 30px 0;
+          }
+          
+          .mainTtl {
+               @include mainFont_bd();
+               
+               font-size: 55px;
+               width: 600px;
+               text-align: left;
+               margin: 0 ;
+
+               @include mq_tablet() {
+                    font-size: 45px;
+               }
+               @include mq_tabletSm() {
+                    width: 80vw;
+                    margin: 0 auto;
+                    text-align: center;
+               }
+          }
+          .subTtl {
+               margin: 20px 0;
+               @include mainFont_rg();
+               
+               font-size: 20px;
+               width: 600px;
+               text-align: left;
+
+               @include mq_tablet() {
+                    font-size: 18px;
+                    width: 40vw;
+               }
+               @include mq_tabletSm() {
+                    width: 65vw;
+                    margin: 20px auto 0 auto;
+                    text-align: center;
+               }
+               
+               @include mq_phone() {
+                    width: 80vw;
+               }
+          }
+          .itemsList {
+               margin: 50px 0 0 0;
+
+               @include mq_tabletSm() {
+                    display: block;
+                    text-align: center;
+               }
+
+               .item {
+                    margin: 30px 0;
+                    a {
+                         @include mainFont_rg();
+                         font-size: 18px;
+                         display: flex;
+                         align-items:  center;
+
+                         @include mq_tabletSm() {
+                              display: block;
+                              text-align: center;
+                         }
+
+                         i {
+                              margin: 0 10px 0 0;
+                              font-size: 25px;
+                              width: 40px;
+                              text-align: center;
+                         }
+                    }
+               }
+          }
+     }
+
+     .leadWrap {
+          position: absolute;
+          top: 50%;
+          right: 25%;
+          transform: translate(50%, -50%);
+          background: $main;
+          color: white;
+          padding: 30px;
+          width: 300px;
+          border-radius: 5px;
+
+          @include mainFont_lg();
+
+          @include mq_tablet() {
+               right: 20%;
+          }
+          
+          @include mq_tabletSm() {
+               position: relative;
+               top: 0;
+               right: 0;
+               transform: none;
+               width: 80vw;
+               margin: 20px auto 0 auto;
+          }
+
+          .ttl {
+               @include mainFont_bd();
+               font-size: 20px;
+               padding: 0 10px;
+               margin: 0 0 20px 0;
+               text-align: center;
+          }
+
+          form {
+
+               @include mq_tabletSm() {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    /deep/ app-shared-form {
+                         display: flex;
+                         flex-wrap: wrap;
+
+                         .formItem {
+                              flex-basis: 46%;
+                              margin: 10px 2%;
+                         }
+                    }
+               }
+               .formItem {
+                    margin: 0 0 15px 0;
+                    
+                    @include mq_tabletSm() {
+                         flex-basis: 100%;
+                    }
+
+                    &.formItem-submit {
+                         @include mq_tabletSm() {
+                              flex-basis: 96%;
+                              margin: 10px 2% 0px 2%;
+                         }
+
+                         input[type="submit"] {
+                              background: lighten( $blue-dark , 25%);
+                              color: white;
+                              text-transform: uppercase;
+                              letter-spacing: 1px;
+                              @include mainFont_lg();
+                         }
+                    }
+               }
+          }
+     }
+}
+
+.valPropFour {
+     position: relative;
+     width: 100vw;
+     height: calc( 100vh - 100px);
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     @include mq_tablet() {
+          height: 800px;
+     }
+     @include mq_tabletSm() {
+          height: auto;
+          padding: 100px 0;
+     }
+
+     .valPropBg{
+          top: 0;
+          left: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          z-index: 0;
+
+          img {
+               display: block;
+               width: 100vw;
+               height: 100vh;
+               object-fit: cover;
+
+               @include mq_tablet() {
+                    height: 100%;
+               }
+          }
+     }
+
+     .valPropInfo {
+          z-index: 5;
+          color: $main;
+
+          .brandIco {
+               text-align: center;
+          }
+          
+
+          .mainTtl {
+               @include mainFont_bd();
+               
+               font-size: 55px;
+               width: 600px;
+               text-align: center;
+               margin: 0 auto 0 auto;
+
+               @include mq_tablet() {
+                    font-size: 45px;
+               }
+               @include mq_tabletSm() {
+                    width: 80vw;
+               }
+          }
+          .subTtl {
+               margin: 20px auto 0 auto;
+               @include mainFont_rg();
+               
+               font-size: 20px;
+               width: 500px;
+               text-align: center;
+
+               @include mq_tablet() {
+                    font-size: 18px;
+               }
+               @include mq_tabletSm() {
+                    width: 65vw;
+               }
+               
+               @include mq_tabletSm() {
+                    width: 80vw;
+               }
+          }
+          .buttonVidWrap {
+               text-align: center;
+               margin: 30px 0 0 0;
+
+               button {
+                    background: transparent;
+                    border: none;
+                    font-size: 40px;
+                    color: $main;
+               }
+          }
+          
      }
 }

@@ -25,7 +25,15 @@ $menu-height: 70px;
 
 
 
-// mixins
+// mixins transition all
+@mixin transitionAll( $mSecs ) {
+     -webkit-transition: all $mSecs ease-out;     
+     -moz-transition: all $mSecs ease-out;     
+     -o-transition: all $mSecs ease-out;     
+     transition: all $mSecs ease-out;     
+}
+
+// mixins Media quieries
 @mixin mq_tablet {
      @media screen and ( max-width: 1024px ) {
           @content;
