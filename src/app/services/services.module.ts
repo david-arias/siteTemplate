@@ -7,6 +7,7 @@ import { NavbarService } from './navbar/navbar.service';
 import { FooterService } from './footer/footer.service';
 
 import { ValPropService } from './valProp/val-prop.service';
+import { ContactService } from './contact/contact.service';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ValPropService } from './valProp/val-prop.service';
           NavbarService,
           FooterService,
 
-          ValPropService
+          ValPropService,
+          ContactService,
      ],
 })
 export class ServicesModule { }

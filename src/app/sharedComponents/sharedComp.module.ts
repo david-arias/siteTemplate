@@ -22,6 +22,12 @@ import { ValPropTwoComponent } from './valProp/val-prop-two/val-prop-two.compone
 import { ValPropThreeComponent } from './valProp/val-prop-three/val-prop-three.component';
 import { ValPropFourComponent } from './valProp/val-prop-four/val-prop-four.component';
 
+// contact
+import { ContactOneComponent } from './contact/contact-one/contact-one.component';
+import { ContactTwoComponent } from './contact/contact-two/contact-two.component';
+import { ContactThreeComponent } from './contact/contact-three/contact-three.component';
+import { ContactFourComponent } from './contact/contact-four/contact-four.component';
+
 
 @NgModule({
      imports: [
@@ -43,7 +49,12 @@ import { ValPropFourComponent } from './valProp/val-prop-four/val-prop-four.comp
           ValPropOneComponent,
           ValPropTwoComponent,
           ValPropThreeComponent,
-          ValPropFourComponent
+          ValPropFourComponent,
+
+          ContactOneComponent,
+          ContactTwoComponent,
+          ContactThreeComponent,
+          ContactFourComponent,
      ],
      exports: [
           SharedFormComponent,
@@ -61,7 +72,12 @@ import { ValPropFourComponent } from './valProp/val-prop-four/val-prop-four.comp
           ValPropOneComponent,
           ValPropTwoComponent,
           ValPropThreeComponent,
-          ValPropFourComponent
+          ValPropFourComponent,
+
+          ContactOneComponent,
+          ContactTwoComponent,
+          ContactThreeComponent,
+          ContactFourComponent,
      ],
      providers: [],
 })

@@ -1,6 +1,6 @@
 
 
-<div class="formItem" *ngFor="let formItm of formItems">
+<div *ngFor="let formItm of formItems" class="formItem formItem_{{formItm.type}}">
 
   <!-- text fields -->
   <div class="textItem" *ngIf="formItm.type == 'text'">

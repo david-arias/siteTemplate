@@ -394,6 +394,11 @@
                margin: 20px auto 0 auto;
           }
 
+          @include mq_phone() {
+               width: calc( 100% - 20px ) ;
+               padding: 30px 10px;
+          }
+
           .ttl {
                @include mainFont_bd();
                font-size: 20px;
@@ -418,11 +423,26 @@
                          }
                     }
                }
+
+               @include mq_phone() {
+                    /deep/ app-shared-form {
+                         .formItem {
+                              flex-basis: 96%;
+                              margin: 10px 2% 0px 2%;
+                         }
+                    }
+               }
                .formItem {
                     margin: 0 0 15px 0;
                     
                     @include mq_tabletSm() {
                          flex-basis: 100%;
+                    }
+
+
+                    @include mq_phone() {
+                         lex-basis: 96%;
+                         margin: 10px 2% 0px 2%;
                     }
 
                     &.formItem-submit {

@@ -8,6 +8,7 @@ export const BRAND = {
      infoMail: "info@mail.com",
      phone: "4536291836",
      direction: "385 Noah Place Suite 878",
+     mapCords: [4.6784478,-74.0556655],
      social: [
           {
                name: "facebook",
@@ -25,6 +26,49 @@ export const BRAND = {
                link: "https://www.instagram.com/?hl=es-la"
           }
      ]
+}
+
+export const CONTACT = {
+     ttl: "We'd love to hear from you",
+     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+     form: {
+          active: true,
+          title: "Interest in something, please contact us",
+          fields: [
+               {
+                    name: "leadName",
+                    type: "text",
+                    required: true,
+                    options: null,
+                    placeHolder: "Full Name",
+                    icon: "far fa-id-badge",
+               },
+               {
+                    name: "leadPhone",
+                    type: "number",
+                    required: true,
+                    options: null,
+                    placeHolder: "Phone number",
+                    icon: "fas fa-phone"
+               },
+               {
+                    name: "leadMail",
+                    type: "email",
+                    required: true,
+                    options: null,
+                    placeHolder: "Email",
+                    icon: "far fa-envelope"
+               },
+               {
+                    name: "leadText",
+                    type: "textArea",
+                    required: false,
+                    options: null,
+                    placeHolder: "Put your message",
+                    icon: null
+               },
+          ]
+     }
 }
 
 // MAIN MENU - NavBar

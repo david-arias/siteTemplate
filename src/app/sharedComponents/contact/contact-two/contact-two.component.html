@@ -1,0 +1,39 @@
+
+<div class="contactWrap contactWrapTwo">
+
+  <div class="mainTtl">
+    Contact us!
+  </div>
+
+  <div class="cntctCont">
+
+    <div class="formWrap" *ngIf="_cos.contact.form.active">
+
+      <form>  
+        <app-shared-form [formItems]="_cos.contact.form.fields"></app-shared-form>
+  
+        <div class="formItem formItem-submit">
+          <input type="submit" value="Contact us!">
+        </div>
+      </form>
+
+    </div>
+    
+    <div class="infoWrap">
+      <div class="dir">
+        <i class="far fa-compass"></i>
+        {{_cos.brand.direction}}
+      </div>
+      <div class="phone">
+        <i class="fas fa-phone"></i>
+        {{_cos.brand.phone}}</div>
+      <div class="mail">
+        <i class="far fa-envelope"></i>
+        {{_cos.brand.infoMail}}
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
